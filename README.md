@@ -191,7 +191,3 @@ python scripts/eval_runner.py
 ## Attribution
 
 Built as part of the Celesto agent sandbox evaluation challenge.
-
-## AI assistant disclosure
-
-This project was developed with AI coding assistance (Google Antigravity / Gemini). All report data, statistics, and design decisions were authored by the developer; the AI assistant was used for code generation, boilerplate, and review. No fabricated test results or live run data are presented as real.
