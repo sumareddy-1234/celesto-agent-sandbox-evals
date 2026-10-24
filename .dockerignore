@@ -1,0 +1,25 @@
+# .dockerignore — keep build context small and prevent secret leaks
+.env
+.env.*
+!.env.example
+.git/
+.gitignore
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+*.md
+!README.md
+demo/
+reports/evidence/
+logs/
+scripts/
+tests/

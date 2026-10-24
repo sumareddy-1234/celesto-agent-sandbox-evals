@@ -1,0 +1,7 @@
+{
+  "failed_step": 7,
+  "total_steps": 10,
+  "policy": "rollback",
+  "rationale": "We chose rollback rather than resume or fresh because step 7 involves installing external packages. A failed install may leave the filesystem in a partially modified state with incomplete package metadata, broken symlinks, or partially extracted archives. Resuming from that state is risky because subsequent steps may see inconsistent tool availability. Creating a completely fresh sandbox (the 'fresh' policy) would discard all progress from steps 1 through 6, including the repository clone and the test-environment setup, which collectively take the longest to complete. Rolling back to the snapshot taken before step 7 is the best trade-off: it restores a known-good filesystem state while preserving all progress up to that point, and the only repeated work is the package installation itself.",
+  "trace_path": "reports/failure_trace.jsonl"
+}

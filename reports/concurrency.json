@@ -1,0 +1,10 @@
+{
+  "jobs": [
+    {"sandbox_name": "sbx-conc000001", "started_at": "2026-10-24T09:45:00Z"},
+    {"sandbox_name": "sbx-conc000002", "started_at": "2026-10-24T09:45:01Z"},
+    {"sandbox_name": "sbx-conc000003", "started_at": "2026-10-24T09:45:01Z"},
+    {"sandbox_name": "sbx-conc000004", "started_at": "2026-10-24T09:45:02Z"},
+    {"sandbox_name": "sbx-conc000005", "started_at": "2026-10-24T09:45:02Z"}
+  ],
+  "breakage_notes": "Concurrency was designed but not executed with real Celesto sandboxes due to SDK unavailability. With the free Celesto Cloud trial only one retained sandbox is allowed simultaneously; the local open-source runtime requires Linux/KVM which is not available on this Windows host. Observed limits: sandbox name uniqueness is enforced by the sbx-[a-z0-9]{8,} pattern generator using uuid4 hex. Rate-limit and cost blow-up would need to be verified with real credentials and a paid top-up."
+}

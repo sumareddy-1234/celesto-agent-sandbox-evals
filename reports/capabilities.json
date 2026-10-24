@@ -1,0 +1,14 @@
+{
+  "capabilities": [
+    {
+      "id": "safety_hooks",
+      "why": "Safety hooks intercept every command before it reaches the Celesto guest and can block disallowed operations such as outbound network calls containing environment variables or destructive filesystem commands. This is a code-enforced control rather than a prompt-level instruction, meaning it cannot be overridden by prompt injection. Without this capability we would rely entirely on the LLM obeying instructions, which is insufficient for security-critical deployments. The audit log produced by the hook provides a tamper-evident record of every attempted and blocked action.",
+      "evidence_path": "reports/evidence/containment.log"
+    },
+    {
+      "id": "network_policy",
+      "why": "The sandbox network policy is set to restricted mode during the containment test, cutting outbound internet access from the guest. This ensures that even if the LLM is tricked into generating a curl exfiltration command, the packet never leaves the VM. We verified this by attempting a curl to an external endpoint from inside the sandbox and observing a blocked result in the audit log. Without network policy the safety hook alone would be the only defence; combining both creates defence in depth.",
+      "evidence_path": "reports/evidence/containment.log"
+    }
+  ]
+}

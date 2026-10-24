@@ -1,0 +1,6 @@
+{
+  "who": "Backend developers and security engineers who run AI-generated code and need to isolate untrusted operations from the host system, preventing credential leaks, destructive commands, and prompt-injection attacks.",
+  "agent_work": "The agent clones a repository inside a Celesto micro-VM sandbox, installs dependencies, executes unit tests, generates a proof file with results, and reports the outcome back to the trusted Run Ledger API via HTTP. All shell commands, file writes, and network access happen inside the isolated guest kernel.",
+  "proof_output": "A proof.txt file inside the sandbox and a 'succeeded' state in the Run Ledger PostgreSQL database.",
+  "idea_source": "idea_bank"
+}

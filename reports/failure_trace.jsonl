@@ -1,0 +1,25 @@
+{"ts":"2026-10-24T09:00:00Z","event":"step_started","step":1,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:05Z","event":"step_completed","step":1,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:06Z","event":"step_started","step":2,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:12Z","event":"step_completed","step":2,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:13Z","event":"step_started","step":3,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:20Z","event":"step_completed","step":3,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:21Z","event":"step_started","step":4,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:28Z","event":"step_completed","step":4,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:29Z","event":"step_started","step":5,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:37Z","event":"step_completed","step":5,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:38Z","event":"step_started","step":6,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:00:46Z","event":"step_completed","step":6,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:00:47Z","event":"step_started","step":7,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:01:02Z","event":"step_failed","step":7,"sandbox_name":"sbx-failtest01","error":"pip install failed: connection timeout after 15 seconds"}
+{"ts":"2026-10-24T09:01:03Z","event":"policy_applied","policy":"rollback","sandbox_name":"sbx-failtest01","from_step":7,"rationale":"Rolling back to pre-step-7 snapshot to restore clean package state"}
+{"ts":"2026-10-24T09:01:08Z","event":"snapshot_restored","sandbox_name":"sbx-failtest01","snapshot_id":"pre-step7-snap"}
+{"ts":"2026-10-24T09:01:09Z","event":"step_started","step":7,"sandbox_name":"sbx-failtest01","attempt":2}
+{"ts":"2026-10-24T09:01:45Z","event":"step_completed","step":7,"sandbox_name":"sbx-failtest01","success":true,"attempt":2}
+{"ts":"2026-10-24T09:01:46Z","event":"step_started","step":8,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:01:54Z","event":"step_completed","step":8,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:01:55Z","event":"step_started","step":9,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:02:03Z","event":"step_completed","step":9,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:02:04Z","event":"step_started","step":10,"sandbox_name":"sbx-failtest01"}
+{"ts":"2026-10-24T09:02:18Z","event":"step_completed","step":10,"sandbox_name":"sbx-failtest01","success":true}
+{"ts":"2026-10-24T09:02:19Z","event":"sandbox_deleted","sandbox_name":"sbx-failtest01","reason":"workflow_completed"}

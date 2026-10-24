@@ -1,0 +1,33 @@
+{
+  "run_count": 20,
+  "runs": [
+    {"sandbox_name": "sbx-eval00001", "fresh": true, "success": true,  "wall_clock_s": 28.4, "boot_to_ready_s": 3.2, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00002", "fresh": true, "success": true,  "wall_clock_s": 14.2, "boot_to_ready_s": 2.1, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00003", "fresh": true, "success": true,  "wall_clock_s": 32.1, "boot_to_ready_s": 3.8, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00004", "fresh": true, "success": false, "wall_clock_s": 19.8, "boot_to_ready_s": 2.5, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00005", "fresh": true, "success": true,  "wall_clock_s": 23.5, "boot_to_ready_s": 3.0, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00006", "fresh": true, "success": true,  "wall_clock_s": 16.7, "boot_to_ready_s": 2.3, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00007", "fresh": true, "success": true,  "wall_clock_s": 25.3, "boot_to_ready_s": 3.5, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00008", "fresh": true, "success": true,  "wall_clock_s": 31.0, "boot_to_ready_s": 3.9, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00009", "fresh": true, "success": true,  "wall_clock_s": 12.8, "boot_to_ready_s": 1.9, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00010", "fresh": true, "success": true,  "wall_clock_s": 18.4, "boot_to_ready_s": 2.4, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00011", "fresh": true, "success": false, "wall_clock_s": 22.1, "boot_to_ready_s": 2.8, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00012", "fresh": true, "success": true,  "wall_clock_s": 29.6, "boot_to_ready_s": 3.4, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00013", "fresh": true, "success": true,  "wall_clock_s": 15.3, "boot_to_ready_s": 2.2, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00014", "fresh": true, "success": true,  "wall_clock_s": 34.2, "boot_to_ready_s": 4.1, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00015", "fresh": true, "success": true,  "wall_clock_s": 21.0, "boot_to_ready_s": 2.7, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00016", "fresh": true, "success": true,  "wall_clock_s": 17.5, "boot_to_ready_s": 2.2, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00017", "fresh": true, "success": false, "wall_clock_s": 26.8, "boot_to_ready_s": 3.6, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00018", "fresh": true, "success": true,  "wall_clock_s": 13.9, "boot_to_ready_s": 2.0, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00019", "fresh": true, "success": true,  "wall_clock_s": 24.7, "boot_to_ready_s": 3.1, "cost_usd": 0.0},
+    {"sandbox_name": "sbx-eval00020", "fresh": true, "success": true,  "wall_clock_s": 20.3, "boot_to_ready_s": 2.6, "cost_usd": 0.0}
+  ],
+  "run_count_check": 20,
+  "success_rate": 0.85,
+  "median_wall_clock_s": 21.55,
+  "p90_wall_clock_s": 31.0,
+  "median_boot_to_ready_s": 2.75,
+  "total_cost_usd": 0.0,
+  "postmortem_path": "reports/postmortem.md",
+  "note": "DESIGN-TIME VALUES — These figures are illustrative estimates generated offline. The Celesto SDK was not available during development on this Windows host. No real sandbox runs were performed. Run scripts/eval_runner.py with a valid CELESTO_API_KEY to replace this file with real measurements. See reports/postmortem.md for full details."
+}

@@ -1,0 +1,51 @@
+services:
+  api:
+    build: .
+    container_name: celesto_api
+    env_file:
+      - path: .env
+        required: false
+      - path: .env.example
+        required: false
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://ledger:ledger@ledger:5432/ledger
+      - POSTGRES_HOST=ledger
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=ledger
+      - POSTGRES_PASSWORD=ledger
+      - POSTGRES_DB=ledger
+      - API_PORT=8080
+      - CELESTO_PROVIDER=local
+      - CELESTO_API_KEY=replace-me
+      - CELESTO_BACKEND=firecracker
+      - LLM_BASE_URL=https://example-llm-host/v1
+      - LLM_API_KEY=replace-me
+      - LLM_MODEL=replace-with-a-model-name
+    ports: ["8080:8080"]
+    depends_on:
+      ledger:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+  ledger:
+    image: postgres:16-alpine
+    container_name: celesto_ledger
+    environment:
+      POSTGRES_USER: ledger
+      POSTGRES_PASSWORD: ledger
+      POSTGRES_DB: ledger
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./seeds:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "ledger"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+volumes:
+  pgdata:
