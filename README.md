@@ -190,4 +190,4 @@ python scripts/eval_runner.py
 
 ## Attribution
 
-Built as part of the Celesto agent sandbox evaluation challenge.
+Built as part of the [HACKATHON] Run Real Agent Work Inside Celesto Sandboxes with Evals and Containment.
